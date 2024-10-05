@@ -1,0 +1,41 @@
+version: '3.6'
+
+services:
+  rembg:
+    build: .
+    #image: 81318131/rembg-server
+    container_name: rembg
+    command: rembg s
+    volumes:
+      - './u2net:/root/.u2net'
+    ports:
+      - "7000:7000"
+
+  cadvisor:
+    container_name: cadvisor
+    image: google/cadvisor:canary
+    ports:
+      - "8080:8080"
+    volumes: 
+      - "/:/rootfs"
+      - "/var/run:/var/run"
+      - "/sys:/sys"
+      - "/var/lib/docker/:/var/lib/docker"
+      - "/dev/disk/:/dev/disk"
+    privileged: true
+    devices: 
+      - "/dev/kmsg"
+ 
+
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    volumes:
+          - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    command:
+          - '--config.file=/etc/prometheus/prometheus.yml'
+    ports:
+        - '9090:9090'
+
+    depends_on:
+      - cadvisor
