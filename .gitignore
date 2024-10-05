@@ -1,1 +1,4 @@
 u2net
+venv
+.pytest_*
+__pycache__
