@@ -1,0 +1,27 @@
+name: Rembg CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: install requirements
+      run: pip install -r requirements.txt
+    - name: build services
+      run: docker compose build
+    - name: run services
+      run: docker compose up -d
+    - name: test containers
+      run: pytest
+    - name: stop containers
+      run: docker compose down
+      
