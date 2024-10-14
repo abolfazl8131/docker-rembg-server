@@ -6,7 +6,7 @@ Integrated with Nvidia Container Toolkit for GPU usage to increase speed and per
 
 ## Stack
 1. Docker'
-[![CDNJS](https://img.shields.io/cdnjs/v/reactstrap.svg)](https://cdnjs.com/libraries/reactstrap
+![CDNJS](https://img.shields.io/cdnjs/v/reactstrap.svg)
 3. Nginx
 4. Rembg
 5. Grafana
