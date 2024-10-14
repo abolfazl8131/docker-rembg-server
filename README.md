@@ -5,13 +5,14 @@ It is also highly maintainable and we have increased Its observability using Gra
 Integrated with Nvidia Container Toolkit for GPU usage to increase speed and performance.<br />
 
 ## Stack
-1. Docker
-2. Nginx
-3. Rembg
-4. Grafana
-5. Cadvisor
-6. Prometheus
-7. Nginx Prometheus exporter
+1. Docker'
+[![CDNJS](https://img.shields.io/cdnjs/v/reactstrap.svg)](https://cdnjs.com/libraries/reactstrap
+3. Nginx
+4. Rembg
+5. Grafana
+6. Cadvisor
+7. Prometheus
+8. Nginx Prometheus exporter
 
 ## Installation
 1. `sh nvidia_container.sh`
