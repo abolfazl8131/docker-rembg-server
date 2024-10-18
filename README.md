@@ -18,8 +18,13 @@ Integrated with Nvidia Container Toolkit for GPU usage to increase speed and per
 1. `sh nvidia_container.sh`
 2. `docker compose build`
 3. `docker compose up -d`
-   
+
+## Use as a web application
 Rembg: http://localhost<br />
 Grafana: http://localhost/grafana<br />
 Grafana-username: admin<br />
 Grafana-password: admin<br />
+## Use as a REST-API
+Rembg API: http://localhost/api<br />
+
+
