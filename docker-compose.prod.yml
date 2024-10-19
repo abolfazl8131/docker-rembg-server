@@ -20,8 +20,7 @@ services:
       - './u2net:/root/.u2net'
     ports:
       - "7000:7000"
-    deploy:
-      replicas: 4
+    
    
   
 
@@ -42,7 +41,7 @@ services:
 
 
   prometheus:
-    image: prom/prometheus
+    image: prom/prometheus:main
     container_name: prometheus
     volumes:
           - ./prometheus.yml:/etc/prometheus/prometheus.yml
@@ -65,7 +64,7 @@ services:
       - prometheus
 
   grafana:
-    image: grafana/grafana
+    image: grafana/grafana:main-ubuntu
     container_name: grafana
     ports:
      - '3000:3000'

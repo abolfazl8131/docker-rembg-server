@@ -13,7 +13,7 @@ services:
        
         
   rembg:
-    image: 81318131/rembg-server:latest
+    image: 81318131/rembg-server
     container_name: rembg
     command: rembg s
     volumes:
