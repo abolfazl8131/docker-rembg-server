@@ -13,7 +13,7 @@ services:
        
         
   rembg:
-    image: 81318131/rembg-server
+    image: 81318131/rembg-server:latest
     container_name: rembg
     command: rembg s
     volumes:
@@ -41,7 +41,7 @@ services:
 
 
   prometheus:
-    image: prom/prometheus
+    image: prom/prometheus:main
     container_name: prometheus
     volumes:
           - ./prometheus.yml:/etc/prometheus/prometheus.yml
@@ -64,7 +64,7 @@ services:
       - prometheus
 
   grafana:
-    image: grafana/grafana
+    image: grafana/grafana:main-ubuntu
     container_name: grafana
     ports:
      - '3000:3000'
