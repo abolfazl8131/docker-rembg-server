@@ -4,6 +4,9 @@ You can just configure your Linux server and install it using docker-compose or 
 It is also highly maintainable and we have increased Its observability using Grafana, Prometheus, and ...<br />
 Integrated with Nvidia Container Toolkit for GPU usage to increase speed and performance.<br />
 
+## What is Rembg?
+an AI-driven app for removing the background of any image. for more information visit https://github.com/danielgatis/rembg
+
 ## Stack
 1. Docker
 2. Docker compose
